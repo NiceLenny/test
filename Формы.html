@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript. Работа с формами</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: Calibri;
+		}
+		.flex {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		h1 {
+			color: #00008B;
+			font-size: 40px;
+			text-align: center;
+			margin: 30px;
+		}
+		.z {
+			width: 60%;
+			margin: 10px auto;
+			background: #40E0D0;
+			border: 5px solid #4682B4;
+			padding: 30px;
+			border-radius: 20px;
+		}
+		.que {
+			margin: 20px 0px;
+		}
+		.text {
+			margin: 5px 0px;
+			width: 100%;
+			border: 0;
+			padding: 10px;
+			border-bottom: 3px solid #4682B4;
+			color: black;
+
+		}
+		input:focus, textarea:focus {
+			outline: none;
+			border-bottom: 3px solid #00008B;
+		}
+		.button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 10px;
+			border: 5px solid #4682B4;
+			color: #4682B4;
+			width: 200px;
+		}
+		.button:hover {
+			border: 5px solid #00008B;
+			color: #00008B;
+			background: #00CED1;
+		}
+		.res {
+			margin-top: 20px;
+		}
+		.radiotext {
+			display: block;
+			margin: 5px 0px;
+		}
+
+
+		@media (max-width: 1000px) {
+			.z {
+				width: 90%;
+			}
+		}
+	</style>
+</head>
+<body>
+
+
+	<h1>JavaScript. Работа с формами</h1>
+	<div class="z">
+		<h2>Задача 1</h2>
+		<div class="que">Выведите сообщение: Привет, <b>ИМЯ</b>. Ваша дата рождения: <b>ДАТА РОЖДЕНИЯ</b></div>
+		<input type="text" class="text input_1_1" placeholder="Введите имя">
+		<input type="date" class="text input_1_2" placeholder="Введите возраст">
+		<a class="button button_1">Ввести</a>
+		<div class="res res1">Здесь будет выводиться результат</div>
+	</div>
+
+	<div class="z">
+		<h2>Задача 2</h2>
+		<div class="que">Выведите сообщение: x<sup>2</sup> + y<sup>2</sup> + z<sup>2</sup> = <b>ОТВЕТ</b></div>
+		<input type="text" class="text input_2_1" placeholder="Введите значение x">
+		<input type="text" class="text input_2_2" placeholder="Введите значение y">
+		<input type="text" class="text input_2_3" placeholder="Введите значение z">
+		<a class="button button_2">Ввести</a>
+		<div class="res res2">Здесь будет выводиться результат</div>
+	</div>
+
+	<div class="z">
+		<h2>Задача 3</h2>
+		<div class="que">Измените форму: В строке ввода ФИО добавьте ограничение в 30 символов, а в строке дополнительно - 60 символов. Также в строке дополнительно - запретите изменение размеров по ширине. Ввод телефона должен реализоваться по маске: <b>+7(888)888-88-88</b>. Выведите сообщение, где прописаны все введенные значения</div>
+		<input type="text" maxlength="30" class="text input_3_1" placeholder="Иванов Иван Иванович">
+		<input type="tel" class="text input_3_2" placeholder="+_(___)-___-__-__" data-slots="_">
+		<textarea maxlength="60" class="text" name="dop" cols="30" rows="10" placeholder="Введите примечания..."></textarea>
+		<a class="button button_3">Ввести</a>
+		<div class="res">Здесь будет выводиться результат</div>
+	</div>
+
+	<div class="z">
+		<h2>Задача 4</h2>
+		<div class="que">Напишите программу - тест, которая выводит введенные варианты ответов и итоговую оценку. Например: <br><b>1) 1 <br>2) 4 <br>3) 3 <br>Оценка: 5 </b></div>
+		<input type="text" class="text input_4_1" placeholder="Иванов Иван Иванович">
+		<div class="flex">
+		<div>
+			<h3>Вопрос 1</h3>
+			<label class="radiotext"><input class="radio" name="vopros_1" type="radio" value="1) 1"> Ответ 1</label>
+    		<label class="radiotext"><input class="radio" name="vopros_1" type="radio" value="1) 2"> Ответ 2</label>
+    		<label class="radiotext"><input class="radio" name="vopros_1" type="radio" value="1) 3"> Ответ 3</label>
+    	</div>
+    	<div>
+    		<h3>Вопрос 2</h3>
+			<label class="radiotext"><input class="radio" name="vopros_2" type="radio" value="2) 1"> Ответ 1</label>
+    		<label class="radiotext"><input class="radio" name="vopros_2" type="radio" value="2) 2"> Ответ 2</label>
+    		<label class="radiotext"><input class="radio" name="vopros_2" type="radio" value="2) 2"> Ответ 3</label>
+    	</div>
+    	<div>
+    		<h3>Вопрос 3</h3>
+			<label class="radiotext"><input class="radio" name="vopros_3" type="radio" value="3) 1"> Ответ 1</label>
+    		<label class="radiotext"><input class="radio" name="vopros_3" type="radio" value="3) 2"> Ответ 2</label>
+    		<label class="radiotext"><input class="radio" name="vopros_3" type="radio" value="3) 3"> Ответ 3</label>
+    	</div>
+    	</div>
+		<a class="button button_4">Сдать</a>
+		<div class="res">Здесь будет выводиться результат</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="1.js"></script>
+</body>
+</html>
